@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /Users/onyx/Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake --regenerate-during-build -S/Users/onyx/CLionProjects/untitled -B/Users/onyx/CLionProjects/untitled/cmake-build-debug-coverage
+  command = /Users/onyx/Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake --regenerate-during-build -S/Users/onyx/CLionProjects/JYM1-ClassRoster -B/Users/onyx/CLionProjects/JYM1-ClassRoster/cmake-build-debug-coverage
   description = Re-running CMake...
   generator = 1
 

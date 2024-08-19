@@ -5,6 +5,16 @@
 			"path" : "CMakeLists.txt"
 		},
 		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/onyx/Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/onyx/Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.29/Modules/CMakeSystem.cmake.in"
+		},
+		{
 			"isGenerated" : true,
 			"path" : "cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake"
 		},
@@ -1213,8 +1223,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/Users/onyx/CLionProjects/untitled/cmake-build-debug",
-		"source" : "/Users/onyx/CLionProjects/untitled"
+		"build" : "/Users/onyx/CLionProjects/JYM1-ClassRoster/cmake-build-debug",
+		"source" : "/Users/onyx/CLionProjects/JYM1-ClassRoster"
 	},
 	"version" : 
 	{
