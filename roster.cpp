@@ -1,10 +1,13 @@
 #include "roster.h"  // Includes the header file for the Roster class, which contains class declarations
 #include <iostream>  // Includes the input/output stream library, allowing for console output
 #include <sstream>   // Includes the string stream library, used for parsing strings
+#include <vector>    // Includes the vector library
+#include <string>    // Includes the string library
 
-// Constructor for the Roster class
+
+// Constructor for the Roster class with noexcept specification
 // Initializes the classRosterArray to contain nullptrs, indicating empty slots
-Roster::Roster() {
+Roster::Roster() noexcept {
     for (int i = 0; i < 5; ++i) {
         classRosterArray[i] = nullptr;  // Initialize each element of classRosterArray to nullptr
     }
@@ -102,6 +105,12 @@ void Roster::parseAndAdd(const std::string& data) {
 
     // Call the add method with parsed data
     add(tokens[0], tokens[1], tokens[2], tokens[3], std::stoi(tokens[4]), std::stoi(tokens[5]), std::stoi(tokens[6]), std::stoi(tokens[7]), degreeProgram);
+}
+
+// Returns a pointer to the array of pointers to Student objects
+// Allows external access to classRosterArray for further operations like printing or calculating averages
+const Student* const* Roster::getClassRosterArray() const {
+    return classRosterArray;  // Return the array of pointers to Student objects
 }
 
 // Destructor for the Roster class

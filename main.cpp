@@ -9,7 +9,7 @@ const string studentData[] =
 {
     "A1,John,Smith,John1989@gmail.com,20,30,35,40,SECURITY",
     "A2,Suzan,Erickson,Erickson_1990@gmail.com,19,50,30,40,NETWORK",
-    "A3,Jack,Napoli,The_lawyer99@yahoo.com,19,20,40,33,SOFTWARE",
+    "A3,Jack,Napoli,The_lawyer99,19,20,40,33,SOFTWARE",
     "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
     "A5,Alex,Scholtes,asch726@wgu.edu,33,10,20,30,SOFTWARE"
 };
@@ -36,8 +36,11 @@ int main() {
     classRoster.printInvalidEmails();  // Calls the printInvalidEmails method to check and print any invalid email addresses
 
     // Print the average days in course for each student
-    for (const auto& student : classRoster.getClassRosterArray()) {
-        classRoster.printAverageDaysInCourse(student->getStudentID());  // Calls printAverageDaysInCourse for each student to calculate and print their average days in courses
+    const Student* const* rosterArray = classRoster.getClassRosterArray();
+    for (int i = 0; i < 5; ++i) {
+        if (rosterArray[i] != nullptr) {
+            classRoster.printAverageDaysInCourse(rosterArray[i]->getStudentID());
+        }
     }
 
     // Print students by degree program (SOFTWARE in this case)
