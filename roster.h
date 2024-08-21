@@ -4,7 +4,8 @@
 
 class Roster {
 private:
-    std::vector<Student*> classRosterArray;  // A vector that stores pointers to Student objects, representing the class roster
+    Student* classRosterArray[5];  // Array of 5 pointers to Student objects
+
 
 public:
     // Adds a new student to the roster
